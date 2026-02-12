@@ -17,7 +17,15 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomeButtom(text: "gold price", color: AppColors.goldColor),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/gold');
+              },
+              child: CustomeButtom(
+                text: "gold price",
+                color: AppColors.goldColor,
+              ),
+            ),
             SizedBox(height: 20),
             CustomeButtom(text: "silver price", color: AppColors.sliverColor),
           ],

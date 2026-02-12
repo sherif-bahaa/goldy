@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goldy/core/costants/app_color.dart';
+import 'package:goldy/features/persentation/screens/widgets/custom_text.dart';
 
 class GoldPage extends StatelessWidget {
   const GoldPage({super.key});
@@ -7,32 +7,31 @@ class GoldPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text(
-          'Gold tracker',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: AppColors.goldColor,
-          ),
-        ),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.black,
+        title: Center(child: CustomText(text: 'Gold tracker')),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.network(
-            'https://cdn-icons-png.flaticon.com/512/616/616408.png',
+            'https://media.istockphoto.com/id/490693469/photo/gold-ingots.jpg?s=1024x1024&w=is&k=20&c=huWPPn9mzSRFepCBayhf7DECa1znlQRIuxw037sF_4Y=',
             width: 100,
             height: 100,
           ),
 
           const SizedBox(height: 20),
-          const Text(
-            'Gold Price',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: AppColors.goldColor,
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const CustomText(text: 'Gold Price'),
+                const SizedBox(width: 10),
+                const CustomText(text: 'USD'),
+              ],
             ),
           ),
         ],
