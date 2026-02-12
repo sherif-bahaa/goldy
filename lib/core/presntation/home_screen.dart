@@ -27,7 +27,15 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            CustomeButtom(text: "silver price", color: AppColors.sliverColor),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/silver');
+              },
+              child: CustomeButtom(
+                text: "silver price",
+                color: AppColors.sliverColor,
+              ),
+            ),
           ],
         ),
       ),

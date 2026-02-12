@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:goldy/core/networking/api_constants.dart';
 
 class DioHelper {
   static late Dio dio;
   static init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api',
+        baseUrl: ApiConstants.baseUrl,
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(seconds: 5),
         receiveTimeout: const Duration(seconds: 3),

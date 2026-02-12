@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:goldy/core/networking/api_constants.dart';
 import 'package:goldy/core/networking/dio_helper.dart';
-import 'package:goldy/features/data/models/gold_model.dart';
+import 'package:goldy/features/gold/data/models/gold_model.dart';
 
 class GoldRepo {
   Future<Either<String, GoldModel>> getGoldPrice() async {
