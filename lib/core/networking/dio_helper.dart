@@ -10,7 +10,10 @@ class DioHelper {
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(seconds: 5),
         receiveTimeout: const Duration(seconds: 3),
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+          'Accept': 'application/json',
+        },
       ),
     );
   }

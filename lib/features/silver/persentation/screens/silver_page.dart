@@ -27,21 +27,26 @@ class SilverPage extends StatelessWidget {
               return Center(child: Text(state.message));
             }
             if (state is SilverSuccess) {
-              return Column(
-                children: [
-                  Image.network(
-                    'https://media.istockphoto.com/id/468068368/photo/stack-of-shiny-silver-bars-inside-a-bank-vault.jpg?s=2048x2048&w=is&k=20&c=Iszr5PG7JI-VCTLx_z-eV52mcTgcUWHMgq2S2RAjV4o=',
-                    width: 100,
-                    height: 100,
-                  ),
-                  Text(
-                    '100 USD',
-                    style: TextStyle(
-                      color: AppColors.sliverColor,
-                      fontSize: 20,
+              return Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+                    Image.network(
+                      'https://media.istockphoto.com/id/468068368/photo/stack-of-shiny-silver-bars-inside-a-bank-vault.jpg?s=2048x2048&w=is&k=20&c=Iszr5PG7JI-VCTLx_z-eV52mcTgcUWHMgq2S2RAjV4o=',
+                      width: 100,
+                      height: 100,
                     ),
-                  ),
-                ],
+                    Text(
+                      '${state.model.price} USD',
+                      style: TextStyle(
+                        color: AppColors.sliverColor,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
               );
             }
             return Center(child: Text('Loading...'));
